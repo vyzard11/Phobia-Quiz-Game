@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>quiz</title>
+	
+	<!-- boostrap modal START-->
+	<link href="css/bootstrap.css" rel="stylesheet" />
+	
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+	<link href="css/bootstrap-modal.css" rel="stylesheet" />
+	<!-- boostrap modal END-->
+	
+	<script type="text/javascript" src="js/jq.js"></script><!-- jquery script -->
+	<link rel="stylesheet" href="css/style-custom.css"><!-- custom style -->
+	<script type="text/javascript">
+	</script>
+	<style type="text/css">
+		.customModal{
+			position:fixed;
+			width:100%;
+			height:100%;
+			background:rgba(255,255,255,0.8);
+			z-index:99999;
+			size: cover;
+		}
+		.customModalContainer{
+			margin:0 auto;
+			margin-top:30%;
+			background:none;
+			width:50%;
+			left:25%;
+			text-align:center;	
+		}
+		.customModalContent{
+			font-family:Ravie;
+			font-size:70px;
+			color:orange;
+			margin-top:150%;
+		}
+		body{
+			background-image:url('img/game.png');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+			background-size:cover;
+		}
+		h2,h3{
+			font-family:Comic Sans MS;
+		}
+		#mainBtn{
+			margin-top:30%;
+			width: 230px;
+			height: 60px;
+			border-radius: 15px;
+			font-size: 2em;
+			font-family:Ravie;
+			color:black;
+		}	
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#testCorrect").click(function(){
+			$("#correct").fadeToggle();
+			setTimeout(function(){
+				$("#correct").fadeToggle();
+			},500);
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="main_game_modal_container" class="modal hide fade" data-backdrop="static" tabindex="-1" data-keyboard="false"></div>
+
+	<div class="customModal" id="rsgTimerModal">
+		<div class="customModalContainer">
+			
+			<div class="customModalContent">	
+				<p id="rsgTimer"></p>
+			</div>
+			
+		</div>
+	</div>
+	<center>
+
+	<input type="text" name="" id="testArray" /><br />
+	<h3 id="scorelbl">Score:</h3>
+	<input type="text" name="" id="score" disabled/><br />
+	
+	<h3 for="" id="timeRem">Time Remaining:</h3>
+	<input type="text" name="" id="gameTimer" /><br /><!-- TIMER -->
+	<h3 for="" id="quesLbl">Question:</h3>
+	<h1 name="" id="question"></h1>
+	<h3 for="" id="cLbl">Choices:</h3>
+	<div class="btn-group-vertical" id="btnChoices">
+	<input type="button" value="" id="choice1" class="btn-choice btn btn-warning btn-lg "/>
+	<input type="button" value="" id="choice2" class="btn-choice btn btn-warning btn-lg "/>
+	<input type="button" value="" id="choice3" class="btn-choice btn btn-warning btn-lg "/>
+	<input type="button" value="" id="choice4" class="btn-choice btn btn-warning btn-lg "/>
+	</div>
+	
+	<br />
+	
+	<!--<label for="">Correct Answer</label><br /> -->
+	<input type="text" name="" id="correct" disabled/>
+	<br />
+	
+	<input type="button" value="Main Menu" id="mainBtn" class="btn-main-menu btn-warning btn-lg "/>
+	</center>
+	
+	<script type="text/javascript" src="js/jq-custom.js"></script><!--custom jq script for for functions and variables-->
+	<!-- boostrap modal JS  START-->
+	<script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-modalmanager.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+	<!-- boostrap modal JS  END-->
+	<script type="text/javascript">
+		$(document).ready(function(){	
+			startRsg();//--main_game_page.html
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>QUIZ MAIN leaderboard_page.html</title>
+	<script type="text/javascript" src="js/jq.js"></script><!-- jquery script -->
+	<link rel="stylesheet" href="css/style-custom.css"><!-- custom style -->
+	<style>
+		.modal-header,.modal-footer{
+			background-image:url("img/bg.jpg");
+			background-size: 100%;
+		}
+		.modal-body{
+			background-image:url("img/bg.jpg");
+			background-size: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<center><img src="img/leaderB.png"></center>
+	</div>
+	<div class="modal-body">
+		<center>
+			<table id="leaderboardTable" class="table table-bordered table-striped">
+				<thead>
+					<tr class="info">
+						<th>Rank</th>
+						<th>Username</th>
+						<th>Score</th>
+					</tr>
+					
+				</thead>
+			</table>
+			
+			<!--<input class="btn-main-menu" type="button" value="MAIN MENU" />-->
+		</center>
+	</div>
+	<div class="modal-footer">
+	</div>
+	
+	<script type="text/javascript" src="js/jq-custom.js"></script><!--custom jq script for for functions and variables-->
+	<script type="text/javascript">
+	
+		getLeaderboard(); //call ajax leaderboard; --leaderboard_page.html
+	
+	</script>
+</body>
+</html>
